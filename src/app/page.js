@@ -1,16 +1,21 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Button } from "@mui/material";
+
+import { Box, Button, Container } from "@mui/material";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <Button
-        sx={{
-          bgcolor: "red",
-          px: 6
-        }}
-      variant="contained">Contained</Button>
-    </div>
+    <Box>
+      <Container>
+        <Button
+          sx={{
+            bgcolor: "red",
+            px: 6,
+            boxShadow: 'none',
+            ":hover": {
+              boxShadow: "none"
+            }
+          }}
+          variant="contained">Contained</Button>
+      </Container>
+    </Box>
   );
 }
